@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+$h1Size: 2.5rem;
+$h2Size: 2rem;
+$h3Size: 1.75rem;
+$h4Size: 1.5rem;
+$h5Size: 1.25rem;
+$h6Size: 1rem;
+
+
+html {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+h1, .h1 {
+  font-size: $h1Size;
+  letter-spacing: -.02em;
+}
+
+h2, .h2 {
+  font-size: $h2Size;
+  letter-spacing: -.01em;
+}
+
+h3, .h3 {
+  font-size: $h3Size;
+  letter-spacing: -.01em;
+  font-weight: 600;
+}
+
+h4, .h4 {
+  letter-spacing: -.01em;
+  font-size: $h4Size;
+}
+
+h5, .h5 {
+  letter-spacing: -.01em;
+  font-size: $h5Size;
+}
+
+h6, .h6 {
+  font-size: $h6Size;
+}

@@ -4,17 +4,21 @@
       <mx-header/>
       <hero/>
     </div>
+
+    <what-i-do/>
   </div>
 </template>
 
 <script>
 import MxHeader from '~/components/header/MxHeader.vue'
 import Hero from '~/components/Hero.vue'
+import WhatIDo from '~/components/WhatIDo/WhatIDo.vue'
 
 export default {
   components: {
     MxHeader,
-    Hero
+    Hero,
+    WhatIDo
   }
 }
 </script>

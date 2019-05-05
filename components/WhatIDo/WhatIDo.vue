@@ -23,10 +23,11 @@
 
 <script>
 import MxSection from '../Section'
+import WhatIDo from './WhatIDo'
 
 export default {
   components: {
-    WhatIDoItem,
+    WhatIDo,
     MxSection
   },
   data: () => ({

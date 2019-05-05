@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import WhatIDoItem from './WhatIDoItem'
 import MxSection from '../Section'
 
 export default {

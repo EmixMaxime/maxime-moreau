@@ -1,14 +1,14 @@
 <template>
   <section class="hero flex">
     <div class="container mx-auto flex items-center">
-      <div class="flex flex-no-wrap">
-        <div class="w-1/2">
+      <div class="flex flex-wrap -mx-6">
+        <div class="w-full lg:w-1/2 px-6">
           <!-- <p class="mb-6 text-xl font-bold" id="test">Explorer. Créer. Ensemble.</p> -->
           <p class="mb-6 text-xl font-bold" id="test">Explore. Create. Together.</p>
           <h1 class="mb-6">Concepteur de solution numériques</h1>
           <p>Développement de solutions pour répondre aux besoins émergents des entreprises.</p>
         </div>
-        <div class="w-1/2 flex flex-col items-center">
+        <div class="w-full lg:w-1/2 px-6 w-1/2 flex flex-col items-center">
           <tech-bubble/>
           <img src="~assets/undraw_hello.svg" alt="illustration">
         </div>

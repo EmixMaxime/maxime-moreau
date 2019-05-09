@@ -6,6 +6,7 @@
     </div>
 
     <what-i-do/>
+    <experiences/>
   </div>
 </template>
 
@@ -13,19 +14,21 @@
 import MxHeader from '~/components/header/MxHeader.vue'
 import Hero from '~/components/Hero.vue'
 import WhatIDo from '~/components/WhatIDo/WhatIDo.vue'
+import Experiences from '~/components/experiences/Experiences.vue'
 
 export default {
   components: {
     MxHeader,
     Hero,
-    WhatIDo
+    WhatIDo,
+    Experiences
   }
 }
 </script>
 
 <style lang="scss">
-$from: #11999e;
-$to: #30e3ca;
+$from: hsl(182, 81%, 34%);
+$to: rgb(29, 215, 190);
 
 .header-wrapper {
   color: config('colors.white');

@@ -9,7 +9,7 @@
           <li v-for="item in links" :key="item.link">
             <a
               :href="item.link"
-              class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >{{ item.txt }}</a>
           </li>
         </ul>

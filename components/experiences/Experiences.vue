@@ -29,7 +29,7 @@
                     <p>{{ item.jobTitle }}</p>
                     <span
                       v-if="item.apprentice"
-                      class="text-sm bg-grey-lighter rounded-lg py-1 px-2"
+                      class="text-sm bg-gray-100 rounded-lg py-1 px-2"
                     >Apprentice</span>
                   </div>
 

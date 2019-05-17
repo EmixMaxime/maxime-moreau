@@ -97,7 +97,16 @@ export default {
   background-color: hsl(202, 99%, 14%);
 }
 
+.card-item {
+  transition: color 0.1s ease;
+  transition-duration: 0.15s;
+  transition-property: color, background-color, box-shadow, transform;
+  cursor: pointer;
+}
+
 .card-item:hover {
+  transform: translateY(-2px);
+
   .corner > svg {
     transform: translateX(5px);
   }

@@ -3,7 +3,7 @@
     <div
       v-for="tech in technologies"
       class="bubble mr-10 flex items-center justify-center"
-      :class="{ big: tech.isBig }"
+      :class="{ big: tech.big, small: tech.small }"
       :key="tech.title"
     >
       <img :src="tech.img">
@@ -18,14 +18,28 @@ export default {
       {
         img: require('@/assets/icons/nodejs.svg'),
         title: 'NodeJS',
-        isBig: true
+        big: true
       },
       {
         img: require('@/assets/icons/docker-original.svg'),
         title: 'Docker',
         small: true
       },
-      { img: require('@/assets/icons/vuejs-original.svg'), title: 'VueJS' }
+      {
+        img: require('@/assets/icons/vuejs-original.svg'),
+        title: 'VueJS',
+        big: true
+      },
+      {
+        img: require('@/assets/icons/python-plain.svg'),
+        title: 'Python',
+        small: true
+      },
+      {
+        img: require('@/assets/icons/nginx-original.svg'),
+        title: 'Nginx',
+        big: true
+      }
     ]
   })
 }
@@ -39,13 +53,22 @@ $bubbleSize: 65px;
   height: $bubbleSize * 1.2;
 }
 
+.small.bubble {
+  width: $bubbleSize * 0.8;
+  height: $bubbleSize * 0.8;
+}
+
 .bubble {
   background-color: hsl(172, 17%, 98%);
   border-radius: 100%;
   width: $bubbleSize;
   height: $bubbleSize;
 
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 3px 10px;
+  // mine
+  // box-shadow: rgba(0, 0, 0, 0.1) 1px 3px 10px;
+
+  // Inspired from Stripe
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 1px 3px 10px rgba(0, 0, 0, 0.07);
 
   > img {
     height: $bubbleSize * 0.65;

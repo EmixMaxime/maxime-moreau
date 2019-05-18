@@ -1,30 +1,32 @@
 <template>
-  <mx-section class="flex flex-col justify-center">
-    <div class="flex flex-col items-center">
-      <h2 class="title-test">What I do</h2>
-      <p class="mt-5">The big picture</p>
-    </div>
+  <div class="whatido">
+    <mx-section class="flex flex-col justify-center">
+      <div class="flex flex-col items-center">
+        <h2 class="title-test">What I do</h2>
+        <p class="mt-5">The big picture</p>
+      </div>
 
-    <ol class="flex flex-wrap -mx-6 mt-10" style="position: relative">
-      <!-- <span class="dashing"></span> -->
-      <li class="px-6 w-full lg:w-1/3" v-for="(item, index) in whatIDo" :key="item.title">
-        <div
-          class="bg-white h-full flex flex-col rounded shadow-lg px-6 py-6 pb-10"
-          :class="cardClass(index)"
-        >
-          <div class="flex justify-center -mx-6 mb-6">
-            <img class="illustration" :src="item.illustration" :alt="item.title">
+      <ol class="flex flex-wrap -mx-6 mt-10" style="position: relative">
+        <!-- <span class="dashing"></span> -->
+        <li class="px-6 w-full lg:w-1/3" v-for="(item, index) in whatIDo" :key="item.title">
+          <div
+            class="bg-white h-full flex flex-col rounded shadow-lg px-6 py-6 pb-10"
+            :class="cardClass(index)"
+          >
+            <div class="flex justify-center -mx-6 mb-6">
+              <img class="illustration" :src="item.illustration" :alt="item.title">
+            </div>
+            <p class="card-title text-xl mb-6 font-bold">{{ item.title }}</p>
+            <p class="mb-6">{{ item.description }}</p>
+
+            <figure class="text-center mt-auto text-gray-700">
+              <blockquote>“{{ item.citation.txt }}” — {{ item.citation.author }}</blockquote>
+            </figure>
           </div>
-          <p class="card-title text-xl mb-6 font-bold">{{ item.title }}</p>
-          <p class="mb-6">{{ item.description }}</p>
-
-          <figure class="text-center mt-auto text-gray-700">
-            <blockquote>“{{ item.citation.txt }}” — {{ item.citation.author }}</blockquote>
-          </figure>
-        </div>
-      </li>
-    </ol>
-  </mx-section>
+        </li>
+      </ol>
+    </mx-section>
+  </div>
 </template>
 
 <script>
@@ -81,6 +83,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.whatido {
+  background: url(~assets/formes.svg) no-repeat center;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
 .card-item--0 {
   border-top-style: solid;
   border-top-color: theme('colors.orange.500');

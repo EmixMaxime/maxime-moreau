@@ -114,7 +114,7 @@ export default {
 
 .corner {
   position: relative;
-  border-color: transparent transparent config('colors.grey-lighter');
+  border-color: transparent transparent theme('colors.grey-lighter');
 
   border-style: solid;
   width: 0;
@@ -126,7 +126,7 @@ export default {
   > svg {
     width: 17px;
     height: 17px;
-    fill: config('colors.grey-dark');
+    fill: theme('colors.grey-dark');
     position: absolute;
     left: -30px;
     top: 60px;

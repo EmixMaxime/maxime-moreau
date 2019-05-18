@@ -31,7 +31,7 @@ $from: hsl(182, 81%, 34%);
 $to: rgb(29, 215, 190);
 
 .header-wrapper {
-  color: config('colors.white');
+  color: theme('colors.white');
   background-image: linear-gradient(90deg, $from 33%, $to 100%);
 }
 

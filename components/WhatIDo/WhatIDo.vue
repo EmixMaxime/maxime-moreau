@@ -6,17 +6,21 @@
     </div>
 
     <ol class="flex flex-wrap -mx-6 mt-10" style="position: relative">
-      <span class="dashing"></span>
+      <!-- <span class="dashing"></span> -->
       <li class="px-6 w-full lg:w-1/3" v-for="(item, index) in whatIDo" :key="item.title">
         <div
-          class="bg-white border-t-4 rounded shadow-lg px-6 py-6 pb-10"
+          class="bg-white h-full flex flex-col rounded shadow-lg px-6 py-6 pb-10"
           :class="cardClass(index)"
         >
           <div class="flex justify-center -mx-6 mb-6">
             <img class="illustration" :src="item.illustration" :alt="item.title">
           </div>
-          <p class="card-title text-xl mb-5 font-bold">{{ item.title }}</p>
-          <p>{{ item.description }}</p>
+          <p class="card-title text-xl mb-6 font-bold">{{ item.title }}</p>
+          <p class="mb-6">{{ item.description }}</p>
+
+          <figure class="text-center mt-auto text-gray-700">
+            <blockquote>“{{ item.citation.txt }}” — {{ item.citation.author }}</blockquote>
+          </figure>
         </div>
       </li>
     </ol>
@@ -42,12 +46,21 @@ export default {
       {
         illustration: require('@/assets/undraw_brainstorming.svg'),
         title: 'Explore',
+        citation: {
+          txt:
+            'The sooner you start to code, the longer the program will take.',
+          author: 'Roy Carlson'
+        },
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque fugit voluptatibus, nostrum atque illo sapiente, adipisci aut, quibusdam deleniti similique ex ducimus libero id aperiam hic! Possimus, quam aperiam. Ipsam!'
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. adipisicing elit. adipisicing elit. adipisicing elit. adipisicing elit. adipisicing elit. adipisicing elit. adipisicing elit. Cumque fugit voluptatibus, nostrum atque illo sapiente, adipisci aut, quibusdam deleniti similique ex ducimus libero id aperiam hic! Possimus, quam aperiam. Ipsam!'
       },
       {
         illustration: require('@/assets/undraw_building.svg'),
         title: 'Create',
+        citation: {
+          txt: 'Codes are a puzzle. A game, just like any other game.',
+          author: 'Alan Turing'
+        },
         description:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque fugit voluptatibus, nostrum atque illo sapiente, adipisci aut, quibusdam deleniti similique ex ducimus libero id aperiam hic! Possimus, quam aperiam. Ipsam!'
       },
@@ -55,6 +68,10 @@ export default {
         // illustration: require('@/assets/undraw_outer_space.svg'),
         illustration: require('@/assets/undraw_launching.svg'),
         title: 'Bring it to the world',
+        citation: {
+          txt: 'Codes are a puzzle. A game, just like any other game.',
+          author: 'Alan Turing'
+        },
         description:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque fugit voluptatibus, nostrum atque illo sapiente, adipisci aut, quibusdam deleniti similique ex ducimus libero id aperiam hic! Possimus, quam aperiam. Ipsam!'
       }
@@ -65,23 +82,26 @@ export default {
 
 <style lang="scss" scoped>
 .card-item--0 {
-  border-top-color: config('colors.orange');
+  border-top-style: solid;
+  border-top-color: theme('colors.orange.500');
   .card-title {
-    color: config('colors.orange');
+    color: theme('colors.orange');
   }
 }
 
 .card-item--1 {
-  border-top-color: config('colors.purple');
+  border-top-style: solid;
+  border-top-color: theme('colors.purple.500');
   .card-title {
-    color: config('colors.purple');
+    color: theme('colors.purple');
   }
 }
 
 .card-item--2 {
-  border-top-color: config('colors.blue');
+  border-top-style: solid;
+  border-top-color: theme('colors.blue.500');
   .card-title {
-    color: config('colors.blue');
+    color: theme('colors.blue');
   }
 }
 

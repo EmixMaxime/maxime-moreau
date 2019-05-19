@@ -3,6 +3,7 @@
     <div class="header-wrapper">
       <mx-header/>
       <hero/>
+      <hero-waves/>
     </div>
 
     <what-i-do/>
@@ -22,7 +23,8 @@ export default {
     MxHeader,
     Hero,
     WhatIDo,
-    Experiences
+    Experiences,
+    HeroWaves
   }
 }
 </script>

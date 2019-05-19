@@ -13,6 +13,7 @@
 <script>
 import MxHeader from '~/components/header/MxHeader.vue'
 import Hero from '~/components/Hero.vue'
+import HeroWaves from '~/components/HeroWaves.vue'
 import WhatIDo from '~/components/WhatIDo/WhatIDo.vue'
 import Experiences from '~/components/experiences/Experiences.vue'
 
@@ -27,12 +28,13 @@ export default {
 </script>
 
 <style lang="scss">
-$from: hsl(182, 81%, 34%);
-$to: rgb(29, 215, 190);
-
 .header-wrapper {
   color: theme('colors.white');
-  background-image: linear-gradient(90deg, $from 33%, $to 100%);
+  background-image: linear-gradient(
+    90deg,
+    theme('colors.mxblue.300') 33%,
+    theme('colors.mxblue.200') 100%
+  );
 }
 
 a {
@@ -41,7 +43,7 @@ a {
 
 ::selection {
   color: #fff;
-  background: $from;
+  background: theme('colors.mxblue.300');
   text-shadow: none;
 }
 

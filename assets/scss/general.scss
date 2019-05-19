@@ -1,5 +1,5 @@
 // @import url('https://fonts.googleapis.com/css?family=Work+Sans');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
 
 $h1Size: 2.5rem;
 $h2Size: 2rem;
@@ -13,9 +13,14 @@ html,body {
   margin: 0;
 }
 
+blockquote, figure, h1, h2, h3, p {
+  margin: 0;
+}
+
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  @apply leading-normal;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
